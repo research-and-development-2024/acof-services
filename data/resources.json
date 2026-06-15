@@ -1,0 +1,191 @@
+[
+  {
+    "spa-id": "spa-1",
+    "display-name": "SPA 1 ? Antelope Valley",
+    "buildings": [],
+    "resources": []
+  },
+  {
+    "spa-id": "spa-2",
+    "display-name": "SPA 2 ? San Fernando Valley",
+    "buildings": [
+      "Casa Del Sol",
+      "Cornerstone",
+      "New Directions Sepulveda I and II",
+      "Osborne Place",
+      "Rayen",
+      "The Nova",
+      "Willis",
+      "Woodland Terrace"
+    ],
+    "resources": [
+      {
+        "resource": "NOLP / North Hollywood",
+        "location": "7336 Bellaire Ave, North Hollywood, CA 91605",
+        "telephone": "213-201-1600"
+      },
+      {
+        "resource": "Meet Each Need with Dignity",
+        "location": "10641 North San Fernando Rd, Pacoima, CA 91331",
+        "telephone": "818-896-0246"
+      },
+      {
+        "resource": "St. Charles Holy Family Service Center",
+        "location": "10825 Moorpark St, North Hollywood, CA 91602",
+        "telephone": "818-985-7365"
+      },
+      {
+        "resource": "Salvation Army Glendale",
+        "location": "300 East Angeleno Avenue, Burbank, CA 91502",
+        "telephone": "818-246-5586"
+      },
+      {
+        "resource": "Make it Happen Inc.",
+        "location": "11120 Ora Vista Ave, Sunland, CA 91040",
+        "telephone": "818-398-6232"
+      },
+      {
+        "resource": "SOVA / Metro",
+        "location": "16439 Vanowen St, Van Nuys, CA 91406",
+        "telephone": "818-968-7682"
+      },
+      {
+        "resource": "North Valley Caring Services",
+        "location": "13453 Raven St, North Hills, CA 91343",
+        "telephone": "818-891-0481"
+      },
+      {
+        "resource": "Department of Public Social Services (Burbank)",
+        "location": "3307 N. Glenoaks Blvd, Burbank, CA 91504",
+        "telephone": "866-544-9048"
+      },
+      {
+        "resource": "Department of Public Social Services (East Valley)",
+        "location": "14545 Lanark St, Panorama City, CA 91402",
+        "telephone": "866-544-9048"
+      },
+      {
+        "resource": "El Proyecto Del Barrio - Panorama City",
+        "location": "9140 Van Nuys Blvd, Panorama City, CA 91402",
+        "telephone": "818-895-2206"
+      },
+      {
+        "resource": "San Fernando Community Health Center",
+        "location": "732 Mott Street, Suites 100 and 110, San Fernando, CA 91340",
+        "telephone": "818-963-5690"
+      },
+      {
+        "resource": "Valley Community Healthcare (North Hills)",
+        "location": "9119 Haskell Ave, North Hills, CA 91343",
+        "telephone": "818-763-8836"
+      },
+      {
+        "resource": "Valley Community Healthcare (North Hollywood)",
+        "location": "6801 Coldwater Canyon Ave, North Hollywood, CA 91605",
+        "telephone": "818-763-8836"
+      }
+    ]
+  },
+  {
+    "spa-id": "spa-3",
+    "display-name": "SPA 3 ? San Gabriel Valley",
+    "buildings": [
+      "Cedar Springs"
+    ],
+    "resources": []
+  },
+  {
+    "spa-id": "spa-4",
+    "display-name": "SPA 4 ? Metro Los Angeles",
+    "buildings": [
+      "226 Berendo",
+      "235 Berendo",
+      "Amistad",
+      "Arlington",
+      "Beverly Terrace",
+      "Brandon",
+      "Fedora",
+      "Fox Normandie",
+      "Gateways",
+      "Gower",
+      "La Primavera",
+      "Las Flores",
+      "Las Palomas",
+      "Lorena Plaza",
+      "Maryland",
+      "Orbison House",
+      "Parker",
+      "Selby",
+      "Silver Star",
+      "Sonya Gardens",
+      "Vendome Palms",
+      "Vista Nueva"
+    ],
+    "resources": []
+  },
+  {
+    "spa-id": "spa-5",
+    "display-name": "SPA 5 ? West Los Angeles",
+    "buildings": [
+      "Step-Up on Fifth"
+    ],
+    "resources": []
+  },
+  {
+    "spa-id": "spa-6",
+    "display-name": "SPA 6 ? South Los Angeles",
+    "buildings": [
+      "39 West",
+      "Avalon",
+      "Central Court",
+      "Figueroa Court",
+      "Firestone Phoenix",
+      "Santos Plaza",
+      "Step-Out",
+      "West Terrace",
+      "Willow"
+    ],
+    "resources": []
+  },
+  {
+    "spa-id": "spa-7",
+    "display-name": "SPA 7 ? East Los Angeles",
+    "buildings": [
+      "Huntington Square"
+    ],
+    "resources": []
+  },
+  {
+    "spa-id": "spa-8",
+    "display-name": "SPA 8 ? South Bay",
+    "buildings": [
+      "California Hotel"
+    ],
+    "resources": []
+  },
+  {
+    "spa-id": "orange-county",
+    "display-name": "Orange County",
+    "buildings": [
+      "Crossroads",
+      "Fullerton Heights"
+    ],
+    "resources": []
+  },
+  {
+    "spa-id": "riverside-county",
+    "display-name": "Riverside County",
+    "buildings": [
+      "Oasis Senior Villa"
+    ],
+    "resources": []
+  },
+  {
+    "spa-id": "ventura-county",
+    "display-name": "Ventura County",
+    "buildings": [
+      "Ventura Springs"
+    ],
+    "resources": []
+  }
+]
