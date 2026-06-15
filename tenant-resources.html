@@ -6,46 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap v5.3 Starter Template</title>
     <!-- Bootstrap CSS -->
-    <link href="https://jsdelivr.net" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <style>
+        .resources-table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .resources-table th,
+        .resources-table td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .resources-table th {
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
-    <header class="container mt-5">
+    <header class="container mt-5 text-center">
         <h1>Tenant Resources</h1>
-        <p class="lead">This page is designed to help ACOF tenants find programs, services, and opportunities
-            that support health, wellness, education, employment, and everyday needs.</p>
+        <p class="lead">This page is designed to help ACOF tenants find programs,
+            services,
+            and opportunities that support health,
+            wellness,
+            education,
+            employment,
+            and everyday needs.</p>
     </header>
-
-    <main class="container mt-5">
+    <main class="container my-5">
         <h2>Resources by Service Planning Area (SPA)</h2>
-        <p> Resources are organized by Service Planning Area (SPA) to help you find services available in your
-            community.</p>
-
-        <!-- Template used by JavaScript -->
-        <template id="spa-section-template">
-            <section class="spa-section">
+        <p>Resources are organized by Service Planning Area (SPA) to help you find services available in your community.
+        </p>
+        <!-- Template used by JavaScript --><template id="spa-section-template">
+            <section class="spa-section mt-5">
                 <h3 data-field="spa-display-name"></h3>
-                <ul data-field="buildings-list"></ul>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Resource name</th>
-                            <th>Location</th>
-                            <th>Telephone number</th>
-                        </tr>
-                    </thead>
-                    <tbody data-field="resources-list"></tbody>
-                </table>
+                <section class="ms-5">
+                    <article class="mt-4">
+                        <h4>ACOF Buildings in this SPA</h4>
+                        <ul data-field="buildings-list"></ul>
+                    </article>
+                    <article class="mt-4">
+                        <h4>Available Resources</h4>
+                        <table class="resources-table">
+                            <thead>
+                                <tr>
+                                    <th>Resource name</th>
+                                    <th>Location</th>
+                                    <th>Telephone number</th>
+                                </tr>
+                            </thead>
+                            <tbody data-field="resources-list"></tbody>
+                        </table>
+                    </article>
+                </section>
             </section>
         </template>
-
         <div id="spa-sections-container"></div>
-
     </main>
-
-    <script>
-        (function () {
+    <script>(function () {
             "use strict";
 
             document.addEventListener("DOMContentLoaded", function () {
@@ -63,7 +87,9 @@
                     const spaData = await response.json();
                     renderSPASections(spaData);
 
-                } catch (error) {
+                }
+
+                catch (error) {
                     console.error("Error loading tenant resources:", error);
                 }
             }
@@ -73,10 +99,13 @@
                 const template = document.getElementById("spa-section-template");
 
                 spaData.forEach(function (spa) {
+                    if (!spa.buildings || spa.buildings.length === 0) {
+                        return;
+                    }
+
                     const section = template.content.cloneNode(true);
 
-                    section.querySelector('[data-field="spa-display-name"]').textContent =
-                        spa["display-name"];
+                    section.querySelector('[data-field="spa-display-name"]').textContent = spa["display-name"];
 
                     const buildingsList = section.querySelector('[data-field="buildings-list"]');
 
@@ -87,6 +116,20 @@
                     });
 
                     const resourcesList = section.querySelector('[data-field="resources-list"]');
+                    if (!spa.resources || spa.resources.length === 0) {
+
+                        const row = document.createElement("tr");
+
+                        const cell = document.createElement("td");
+                        cell.colSpan = 3;
+                        cell.textContent = "No resources available in this SPA.";
+
+                        row.appendChild(cell);
+                        resourcesList.appendChild(row);
+
+                        container.appendChild(section);
+                        return;
+                    }
 
                     spa.resources.forEach(function (resource) {
                         const row = document.createElement("tr");
