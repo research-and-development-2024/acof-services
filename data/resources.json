@@ -3,7 +3,23 @@
     "spa-id": "spa-1",
     "display-name": "SPA 1: Antelope Valley",
     "buildings": [],
-    "resources": []
+    "resources": [
+      {
+        "resource": "Random resource 1",
+        "location": "Los Angeles",
+        "telephone": 123
+      },
+      {
+        "resource": "Random resource 2",
+        "location": "Los Angeles",
+        "telephone": 345
+      },
+      {
+        "resource": "Random resource 3",
+        "location": "Los Angeles",
+        "telephone": 678
+      }
+    ]
   },
   {
     "spa-id": "spa-2",
