@@ -1,13 +1,13 @@
 [
   {
     "spa-id": "spa-1",
-    "display-name": "SPA 1 ? Antelope Valley",
+    "display-name": "SPA 1: Antelope Valley",
     "buildings": [],
     "resources": []
   },
   {
     "spa-id": "spa-2",
-    "display-name": "SPA 2 ? San Fernando Valley",
+    "display-name": "SPA 2: San Fernando Valley",
     "buildings": [
       "Casa Del Sol",
       "Cornerstone",
@@ -88,7 +88,7 @@
   },
   {
     "spa-id": "spa-3",
-    "display-name": "SPA 3 ? San Gabriel Valley",
+    "display-name": "SPA 3: San Gabriel Valley",
     "buildings": [
       "Cedar Springs"
     ],
@@ -96,7 +96,7 @@
   },
   {
     "spa-id": "spa-4",
-    "display-name": "SPA 4 ? Metro Los Angeles",
+    "display-name": "SPA 4:  Metro Los Angeles",
     "buildings": [
       "226 Berendo",
       "235 Berendo",
@@ -125,7 +125,7 @@
   },
   {
     "spa-id": "spa-5",
-    "display-name": "SPA 5 ? West Los Angeles",
+    "display-name": "SPA 5: West Los Angeles",
     "buildings": [
       "Step-Up on Fifth"
     ],
@@ -133,7 +133,7 @@
   },
   {
     "spa-id": "spa-6",
-    "display-name": "SPA 6 ? South Los Angeles",
+    "display-name": "SPA 6: South Los Angeles",
     "buildings": [
       "39 West",
       "Avalon",
@@ -149,7 +149,7 @@
   },
   {
     "spa-id": "spa-7",
-    "display-name": "SPA 7 ? East Los Angeles",
+    "display-name": "SPA 7: East Los Angeles",
     "buildings": [
       "Huntington Square"
     ],
@@ -157,7 +157,7 @@
   },
   {
     "spa-id": "spa-8",
-    "display-name": "SPA 8 ? South Bay",
+    "display-name": "SPA 8: South Bay",
     "buildings": [
       "California Hotel"
     ],
