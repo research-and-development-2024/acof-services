@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap v5.3 Starter Template</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://jsdelivr.net" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="container mt-5">
+        <h1>Tenant Resources</h1>
+        <p class="lead">This page is designed to help ACOF tenants find programs, services, and opportunities
+            that support health, wellness, education, employment, and everyday needs.</p>
+    </header>
+
+    <main class="container mt-5">
+        <h2>Resources by Service Planning Area (SPA)</h2>
+        <p> Resources are organized by Service Planning Area (SPA) to help you find services available in your
+            community.</p>
+
+        <!-- Template used by JavaScript -->
+        <template id="spa-section-template">
+            <section class="spa-section">
+                <h3 data-field="spa-display-name"></h3>
+                <ul data-field="buildings-list"></ul>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Resource name</th>
+                            <th>Location</th>
+                            <th>Telephone number</th>
+                        </tr>
+                    </thead>
+                    <tbody data-field="resources-list"></tbody>
+                </table>
+            </section>
+        </template>
+
+        <div id="spa-sections-container"></div>
+
+    </main>
+
+    <script>
+        (function () {
+            "use strict";
+
+            document.addEventListener("DOMContentLoaded", function () {
+                loadTenantResources();
+            });
+
+            async function loadTenantResources() {
+                try {
+                    const response = await fetch("data/resources.json");
+
+                    if (!response.ok) {
+                        throw new Error("Could not load resources.json");
+                    }
+
+                    const spaData = await response.json();
+                    renderSPASections(spaData);
+
+                } catch (error) {
+                    console.error("Error loading tenant resources:", error);
+                }
+            }
+
+            function renderSPASections(spaData) {
+                const container = document.getElementById("spa-sections-container");
+                const template = document.getElementById("spa-section-template");
+
+                spaData.forEach(function (spa) {
+                    const section = template.content.cloneNode(true);
+
+                    section.querySelector('[data-field="spa-display-name"]').textContent =
+                        spa["display-name"];
+
+                    const buildingsList = section.querySelector('[data-field="buildings-list"]');
+
+                    spa.buildings.forEach(function (building) {
+                        const li = document.createElement("li");
+                        li.textContent = building;
+                        buildingsList.appendChild(li);
+                    });
+
+                    const resourcesList = section.querySelector('[data-field="resources-list"]');
+
+                    spa.resources.forEach(function (resource) {
+                        const row = document.createElement("tr");
+
+                        const resourceCell = document.createElement("td");
+                        resourceCell.textContent = resource.resource || "";
+
+                        const locationCell = document.createElement("td");
+                        locationCell.textContent = resource.location || "";
+
+                        const telephoneCell = document.createElement("td");
+                        telephoneCell.textContent = resource.telephone || "";
+
+                        row.appendChild(resourceCell);
+                        row.appendChild(locationCell);
+                        row.appendChild(telephoneCell);
+
+                        resourcesList.appendChild(row);
+                    });
+
+                    container.appendChild(section);
+                });
+            }
+
+        })();
+    </script>
+</body>
+
+</html>
