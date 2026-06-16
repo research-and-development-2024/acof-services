@@ -85,12 +85,11 @@
                     const response = await fetch("data/resources.json");
 
                     if (!response.ok) {
-                        throw new Error("Could not load resources.json");
+                        throw new Error("Could not load resources data (resources.json)");
                     }
 
                     const spaData = await response.json();
                     renderSPASections(spaData);
-
                 }
 
                 catch (error) {
