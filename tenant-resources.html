@@ -11,7 +11,8 @@
 
     <style>
         :root {
-            --acof-blue: rgba(0, 90, 156, 0.12); /* Replace with official ACOF blue */
+            --acof-blue: rgba(0, 90, 156, 0.12);
+            /* Replace with official ACOF blue */
         }
 
         .resources-table tbody tr:hover {
@@ -41,7 +42,7 @@
     <header class="container mt-5 text-center">
         <h1>Tenant Resources</h1>
         <p class="lead">This page is designed to help ACOF tenants find community resources that support
-    health, wellness, food access, medical care, benefits, and everyday needs.</p>
+            health, wellness, food access, medical care, benefits, and everyday needs.</p>
     </header>
     <main class="container my-5">
         <h2>Resources by Service Planning Area (SPA)</h2>
@@ -82,8 +83,12 @@
 
             async function loadTenantResources() {
                 try {
-                    const response = await fetch("data/resources.json");
+                    const resourcesUrl = "data/resources.json?v=" + Date.now();
 
+                    const response = await fetch(resourcesUrl, {
+                        cache: "no-store"
+                    });
+                    
                     if (!response.ok) {
                         throw new Error("Could not load resources data (resources.json)");
                     }
