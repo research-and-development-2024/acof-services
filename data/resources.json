@@ -2,16 +2,8 @@
   {
     "spa-id": "spa-1",
     "display-name": "SPA 1: Antelope Valley",
-    "buildings": [
-      "New Building"
-    ],
-    "resources": [
-      {
-        "resource": "New Resource",
-        "location": "ABC",
-        "telephone": 123
-      }
-    ]
+    "buildings": [],
+    "resources": []
   },
   {
     "spa-id": "spa-2",
