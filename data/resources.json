@@ -3,7 +3,13 @@
     "spa-id": "spa-1",
     "display-name": "SPA 1: Antelope Valley",
     "buildings": [],
-    "resources": []
+    "resources": [
+      {
+        "resource": "Antelope Valley AJCC",
+        "location": "1420 West Avenue I Lancaster, CA 93534",
+        "telephone": "661-726-4128"
+      }
+    ]
   },
   {
     "spa-id": "spa-2",
@@ -83,6 +89,16 @@
         "resource": "Valley Community Healthcare (North Hollywood)",
         "location": "6801 Coldwater Canyon Ave, North Hollywood, CA 91605",
         "telephone": "818-763-8836"
+      },
+      {
+        "resource": "Northeast San Fernando Valley WorkSource Center/AJCC",
+        "location": "13356 Eldridge Ave, LA Mission College, Sylmar, CA 91342",
+        "telephone": "818-482-1754"
+      },
+      {
+        "resource": "Santa Clarita AJCC",
+        "location": "20730 Soledad Street, Santa Clarita, CA 91351",
+        "telephone": "661-505-6530"
       }
     ]
   },
@@ -92,7 +108,23 @@
     "buildings": [
       "Cedar Springs"
     ],
-    "resources": []
+    "resources": [
+      {
+        "resource": "East San Gabriel Valley AJCC",
+        "location": "14101 E. Nelson Ave, La Puente, CA 91746",
+        "telephone": "626-934-5700"
+      },
+      {
+        "resource": "Monrovia AJCC Affiliate",
+        "location": "920 S. Mountain Ave, Monrovia, CA 91016",
+        "telephone": "626-471-3035"
+      },
+      {
+        "resource": "Pomona Valley Comprehensive AJCC",
+        "location": "1460 E. Holt Ave, Entrance #3, Pomona, CA 91767",
+        "telephone": "909-242-7999"
+      }
+    ]
   },
   {
     "spa-id": "spa-4",
@@ -121,7 +153,23 @@
       "Vendome Palms",
       "Vista Nueva"
     ],
-    "resources": []
+    "resources": [
+      {
+        "resource": "Veterans AJCC",
+        "location": "1816 South Figueroa Street, Los Angeles, CA 90015",
+        "telephone": "213-742-9560"
+      },
+      {
+        "resource": "Worker Education Resource Center (WERC)",
+        "location": "1545 Wilshire Blvd, 5th Floor, Los Angeles, CA 90006",
+        "telephone": "213-639-2220"
+      },
+      {
+        "resource": "Jewish Family Services",
+        "location": "330.N Fairfax, Los Angeles, CA 90036",
+        "telephone": "866-931-2222"
+      }
+    ]
   },
   {
     "spa-id": "spa-5",
@@ -129,7 +177,13 @@
     "buildings": [
       "Step-Up on Fifth"
     ],
-    "resources": []
+    "resources": [
+      {
+        "resource": "West Los Angeles AJCC",
+        "location": "5446 Sepulveda Blvd, Culver City, CA 90320",
+        "telephone": "310-309-6000"
+      }
+    ]
   },
   {
     "spa-id": "spa-6",
@@ -145,7 +199,28 @@
       "West Terrace",
       "Willow"
     ],
-    "resources": []
+    "resources": [
+      {
+        "resource": "Slawson AJCC",
+        "location": "5500 Rickenbacker Rd., Room A201, Bell, CA 90201",
+        "telephone": "323-729-6400"
+      },
+      {
+        "resource": "HUBCITIES",
+        "location": "4354 Tweedy Blvd, South Gate, CA 90280",
+        "telephone": "323-586-4700"
+      },
+      {
+        "resource": "Willowbrook AJCC",
+        "location": "11737 Wilmington Ave, Los Angeles, CA 90059",
+        "telephone": "323-564-5021"
+      },
+      {
+        "resource": "Maxine Waters Employmetn Preparation Center",
+        "location": "10925 South Central Ave, Los Angeles, CA 90059",
+        "telephone": "323-537-7700"
+      }
+    ]
   },
   {
     "spa-id": "spa-7",
@@ -153,7 +228,13 @@
     "buildings": [
       "Huntington Square"
     ],
-    "resources": []
+    "resources": [
+      {
+        "resource": "Whittier AJCC",
+        "location": "9401 Painter Ave, Whittier, CA 90605",
+        "telephone": "562-907-6995"
+      }
+    ]
   },
   {
     "spa-id": "spa-8",
@@ -161,7 +242,18 @@
     "buildings": [
       "California Hotel"
     ],
-    "resources": []
+    "resources": [
+      {
+        "resource": "Rancho Dominguez Comprehensive AJCC",
+        "location": "2909 E. Pacific Commerce Dr, Compton, CA 90221",
+        "telephone": "310-762-1101"
+      },
+      {
+        "resource": "Rio Hondo Comprehensive AJCC",
+        "location": "10400 Pioneer Blvd., Suite 9, Santa Fe Springs, CA 90670",
+        "telephone": "562-946-2237"
+      }
+    ]
   },
   {
     "spa-id": "orange-county",
