@@ -1,169 +1,50 @@
-<!doctype html>
-<html lang="en">
+---
+layout: default
+title: Tenant Resources
+description: "Find community resources."
+---
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tenant Resources</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<header>
 
-    <style>
-        :root {
-            --acof-blue: rgba(0, 90, 156, 0.12);
-            /* Replace with official ACOF blue */
-        }
+    {% include main-nav.html overlay=false %}
 
-        .resources-table tbody tr:hover {
-            background-color: var(--acof-blue);
-            cursor: pointer;
-        }
+</header>
 
-        .resources-table {
-            border-collapse: collapse;
-            width: 100%;
-        }
+<main class="container my-5">
 
-        .resources-table th,
-        .resources-table td {
-            border: 1px solid black;
-            padding: 8px;
-            text-align: left;
-        }
-
-        .resources-table th {
-            font-weight: bold;
-        }
-    </style>
-</head>
-
-<body>
-    <header class="container mt-5 text-center">
+    <header class="text-center">
         <h1>Tenant Resources</h1>
         <p class="lead">This page is designed to help ACOF tenants find community resources that support
             health, wellness, food access, medical care, benefits, and everyday needs.</p>
     </header>
-    <main class="container my-5">
-        <h2>Resources by Service Planning Area (SPA)</h2>
-        <p>Resources are organized by Service Planning Area (SPA) to help you find services available in your community.
-        </p>
-        <!-- Template used by JavaScript --><template id="spa-section-template">
-            <section class="spa-section mt-5">
-                <h3 data-field="spa-display-name"></h3>
-                <section class="ms-5">
-                    <article class="mt-4">
-                        <h4>ACOF buildings in this area</h4>
-                        <ul data-field="buildings-list"></ul>
-                    </article>
-                    <article class="mt-4">
-                        <h4>Resources available in this area</h4>
-                        <table class="resources-table">
-                            <thead>
-                                <tr>
-                                    <th>Resource</th>
-                                    <th>Address</th>
-                                    <th>Phone</th>
-                                </tr>
-                            </thead>
-                            <tbody data-field="resources-list"></tbody>
-                        </table>
-                    </article>
-                </section>
+
+    <h2>Resources by Service Planning Area (SPA)</h2>
+    <p>Resources are organized by Service Planning Area (SPA) to help you find services available in your community.
+    </p>
+    <!-- Template used by JavaScript --><template id="spa-section-template">
+        <section class="spa-section mt-5">
+            <h3 data-field="spa-display-name"></h3>
+            <section class="ms-5">
+                <article class="mt-4">
+                    <h4>ACOF buildings in this area</h4>
+                    <ul data-field="buildings-list"></ul>
+                </article>
+                <article class="mt-4">
+                    <h4>Resources available in this area</h4>
+                    <table class="resources-table">
+                        <thead>
+                            <tr>
+                                <th>Resource</th>
+                                <th>Address</th>
+                                <th>Phone</th>
+                            </tr>
+                        </thead>
+                        <tbody data-field="resources-list"></tbody>
+                    </table>
+                </article>
             </section>
-        </template>
-        <div id="spa-sections-container"></div>
-    </main>
-    <script>(function () {
-            "use strict";
-
-            document.addEventListener("DOMContentLoaded", function () {
-                loadTenantResources();
-            });
-
-            async function loadTenantResources() {
-                try {
-                    const resourcesUrl = "data/resources.json?v=" + Date.now();
-
-                    const response = await fetch(resourcesUrl, {
-                        cache: "no-store"
-                    });
-                    
-                    if (!response.ok) {
-                        throw new Error("Could not load resources data (resources.json)");
-                    }
-
-                    const spaData = await response.json();
-                    renderSPASections(spaData);
-                }
-
-                catch (error) {
-                    console.error("Error loading tenant resources:", error);
-                }
-            }
-
-            function renderSPASections(spaData) {
-                const container = document.getElementById("spa-sections-container");
-                const template = document.getElementById("spa-section-template");
-
-                spaData.forEach(function (spa) {
-                    if (!spa.buildings || spa.buildings.length === 0) {
-                        return;
-                    }
-
-                    const section = template.content.cloneNode(true);
-
-                    section.querySelector('[data-field="spa-display-name"]').textContent = spa["display-name"];
-
-                    const buildingsList = section.querySelector('[data-field="buildings-list"]');
-
-                    spa.buildings.forEach(function (building) {
-                        const li = document.createElement("li");
-                        li.textContent = building;
-                        buildingsList.appendChild(li);
-                    });
-
-                    const resourcesList = section.querySelector('[data-field="resources-list"]');
-                    if (!spa.resources || spa.resources.length === 0) {
-
-                        const row = document.createElement("tr");
-
-                        const cell = document.createElement("td");
-                        cell.colSpan = 3;
-                        cell.textContent = "No resources are currently listed for this area.";
-
-                        row.appendChild(cell);
-                        resourcesList.appendChild(row);
-
-                        container.appendChild(section);
-                        return;
-                    }
-
-                    spa.resources.forEach(function (resource) {
-                        const row = document.createElement("tr");
-
-                        const resourceCell = document.createElement("td");
-                        resourceCell.textContent = resource.resource || "";
-
-                        const locationCell = document.createElement("td");
-                        locationCell.textContent = resource.location || "";
-
-                        const telephoneCell = document.createElement("td");
-                        telephoneCell.textContent = resource.telephone || "";
-
-                        row.appendChild(resourceCell);
-                        row.appendChild(locationCell);
-                        row.appendChild(telephoneCell);
-
-                        resourcesList.appendChild(row);
-                    });
-
-                    container.appendChild(section);
-                });
-            }
-
-        })();
-    </script>
-</body>
-
-</html>
+        </section>
+    </template>
+    <div id="spa-sections-container"></div>
+</main>
+<script src="js/tenant-resources.js" defer></script>

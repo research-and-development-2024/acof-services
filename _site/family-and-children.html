@@ -44,6 +44,31 @@
                 border-radius: 50rem;
             }
         }
+
+        :root {
+            --acof-blue: rgba(0, 90, 156, 0.12);
+            /* Replace with official ACOF blue */
+        }
+
+        .resources-table tbody tr:hover {
+            background-color: var(--acof-blue);
+        }
+
+        .resources-table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .resources-table th,
+        .resources-table td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .resources-table th {
+            font-weight: bold;
+        }
     </style>
 </head>
 
