@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ page.description | escape }}">
+    <title>{{ page.title | escape }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
+
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        .hero-image {
+            display: block;
+            width: 100%;
+            height: auto;
+            min-height: 25rem;
+            object-fit: cover;
+        }
+
+        .donate-section {
+            background: url("img/donate-hands.webp") center / cover no-repeat;
+        }
+
+        .main-navbar {
+            background-color: rgb(244 244 244 / 80%);
+        }
+
+        .bg-deep-blue {
+            background-color: #013556;
+        }
+
+        .mist-blue {
+            color: #E6EFF5;
+        }
+
+        /* Apply pill-shaped corners when the navbar expands at the lg breakpoint. */
+        @media (min-width: 992px) {
+            .main-navbar {
+                border-radius: 50rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    {{ content }}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
