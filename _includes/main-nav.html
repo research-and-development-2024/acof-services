@@ -1,5 +1,5 @@
 <!-- Main navivgation -->
-<nav class="navbar navbar-expand-lg position-absolute top-0 start-0 end-0 z-3 mt-4 mx-lg-3 main-navbar"
+<nav class="navbar navbar-expand-lg z-3 mt-4 mx-lg-3 main-navbar {% unless include.overlay == false %}position-absolute top-0 start-0 end-0{% endunless %}"
     data-bs-theme="light" aria-label="Main navigation">
     <div class="container">
         <a class="navbar-brand" href="./">
@@ -14,7 +14,7 @@
         <div class="collapse navbar-collapse" id="mainMenu">
             <ul class="navbar-nav ms-auto text-uppercase fw-medium">
                 <li class="nav-item">
-                    <a class="nav-link p-lg-3 text-black" href="#">Family and Children</a>
+                    <a class="nav-link p-lg-3 text-black" href="./family-and-children.html">Family and Children</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link p-lg-3 text-black" href="#">Health & Housing</a>
