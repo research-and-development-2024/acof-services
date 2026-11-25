@@ -20,20 +20,20 @@ description: "Find community resources."
     </div>
 </header>
 
-<main class="pt-1 pb-5" style="background-color: #ECF6F9;">
+<main id="tenant-resources" class="pt-1 pb-5">
     <div class="container">
         <!-- Template used by JavaScript --><template id="spa-section-template">
             <section class="spa-section mt-5">
-                <h2 class="tr-heading" data-field="spa-display-name"></h2>
+                <h2 data-field="spa-display-name"></h2>
                 <div class="ms-md-5">
                     <article class="mt-4">
-                        <h3 class="tr-subheading">ACOF buildings in this area</h3>
+                        <h3><span class="buildings-heading">ACOF buildings in this area</span></h3>
                         <ul data-field="buildings-list"></ul>
                     </article>
                     <article class="mt-4">
-                        <h3 class="tr-subheading">Resources available in this area</h3>
+                        <h3>Resources available in this area</h3>
                         <div class="table-responsive">
-                        <table class="resources-table">
+                        <table>
                             <thead>
                                 <tr>
                                     <th scope="col">Resource</th>

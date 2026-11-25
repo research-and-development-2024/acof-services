@@ -27,27 +27,7 @@
             --soft-gray: rgb(244 244 244 / 80%);
         }
 
-        /* Color scheme classes */        
-        .text-footer {
-            color: var(--mist-blue);
-        }
-        .bg-footer {
-            background-color: var(--deep-blue);
-        }
-
-        .tr-header {
-            color: var(--ice-blue);
-            background-color: var(--ocean-blue);
-        }
-
-        .tr-heading {
-            color: var(--ocean-blue);        
-        }
-
-        .tr-subheading {
-            color: var(--lagoon-blue);
-        }
-
+        /* Hero/header */
         .hero-image {
             display: block;
             width: 100%;
@@ -56,45 +36,77 @@
             object-fit: cover;
         }
 
-        .donate-section {
-            background: url("img/donate-hands.webp") center / cover no-repeat;
-        }
-
-        .main-navbar {
+        /* Main navigation menu */        
+        #main-navbar {
             background-color: var(--soft-gray);
         }
 
-        .resources-table {
+        /* Apply pill-shaped corners when the navbar expands at the lg breakpoint. */
+        @media (min-width: 992px) {
+            #main-navbar {
+                border-radius: 50rem;
+            }
+        }
+
+        /* Footer section */
+        #footer {
+            color: var(--mist-blue);
+            background-color: var(--deep-blue);
+        }
+
+        /* Donate section */
+        #donate {
+            background: url("img/donate-hands.webp") center / cover no-repeat;
+        }
+
+        /* Tenant resources classes */
+        .tr-header {
+            color: var(--ice-blue);
+            background-color: var(--ocean-blue);
+        }
+
+        #tenant-resources {
+            background-color: var(--cloud-blue);
+        }
+
+        #tenant-resources h2 {
+            color: var(--ocean-blue);
+        }
+
+        #tenant-resources h3 {
+            color: var(--lagoon-blue);
+        }
+
+        #tenant-resources table {
             border-collapse: collapse;
             width: 100%;
         }
 
-        .resources-table th,
-        .resources-table td {
-            border: 1px solid var(--mist-blue);            
-            text-align: left;            
+        #tenant-resources th,
+        #tenant-resources td {
+            border: 1px solid var(--mist-blue);
+            text-align: left;
         }
 
-        .resources-table th {
+        #tenant-resources th {
             padding: 0.625rem 1.25rem;
             font-weight: bold;
             background-color: var(--pearl-gray);
         }
 
-        .resources-table td {
+        #tenant-resources td {
             padding: 1.25rem;
             background-color: white;
         }
 
-        .resources-table tbody tr:hover td {
+        #tenant-resources tbody tr:hover td {
             background-color: var(--mist-blue);
-        }        
+        }
 
-        /* Apply pill-shaped corners when the navbar expands at the lg breakpoint. */
-        @media (min-width: 992px) {
-            .main-navbar {
-                border-radius: 50rem;
-            }
+        #tenant-resources .buildings-heading {
+            display: inline-block;
+            border-bottom: 2px solid currentColor;
+            padding-bottom: 0.25rem;
         }
     </style>
 </head>
