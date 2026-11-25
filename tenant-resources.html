@@ -20,12 +20,12 @@ description: "Find community resources."
     </div>
 </header>
 
-<main class="pt-1 pb-4" style="background-color: #ECF6F9;">
+<main class="pt-1 pb-5" style="background-color: #ECF6F9;">
     <div class="container">
         <!-- Template used by JavaScript --><template id="spa-section-template">
             <section class="spa-section mt-5">
                 <h2 class="tr-heading" data-field="spa-display-name"></h2>
-                <section class="ms-md-5">
+                <div class="ms-md-5">
                     <article class="mt-4">
                         <h3 class="tr-subheading">ACOF buildings in this area</h3>
                         <ul data-field="buildings-list"></ul>
@@ -36,16 +36,16 @@ description: "Find community resources."
                         <table class="resources-table">
                             <thead>
                                 <tr>
-                                    <th>Resource</th>
-                                    <th>Address</th>
-                                    <th>Phone</th>
+                                    <th scope="col">Resource</th>
+                                    <th scope="col">Address</th>
+                                    <th scope="col">Phone</th>
                                 </tr>
                             </thead>
                             <tbody data-field="resources-list"></tbody>
                         </table>
                         </div>
                     </article>
-                </section>
+                </div>
             </section>
         </template>
         <div id="spa-sections-container"></div>
