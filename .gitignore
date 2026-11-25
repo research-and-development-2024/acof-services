@@ -4,6 +4,7 @@
 # Local Jekyll dependency files
 /Gemfile
 /Gemfile.lock
+/_site/
 
 # macOS files
 .DS_Store

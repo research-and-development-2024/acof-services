@@ -14,6 +14,31 @@
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         }
 
+        /* Color scheme */
+        :root {
+            --deep-blue: #013556;
+            --mist-blue: #E6EFF5;
+            --ocean-blue: #01619C;
+            --ice-blue: #E1F8FF;
+
+            ECF6F9
+
+            --soft-gray: rgb(244 244 244 / 80%) 
+        }
+
+        /* Color scheme classes */        
+        .text-footer {
+            color: var(--mist-blue);
+        }
+        .bg-footer {
+            background-color: var(--deep-blue);
+        }
+
+        .tr-header {
+            color: var(--ice-blue);
+            background-color: var(--ocean-blue);
+        }
+
         .hero-image {
             display: block;
             width: 100%;
@@ -27,31 +52,11 @@
         }
 
         .main-navbar {
-            background-color: rgb(244 244 244 / 80%);
-        }
-
-        .bg-deep-blue {
-            background-color: #013556;
-        }
-
-        .mist-blue {
-            color: #E6EFF5;
-        }
-
-        /* Apply pill-shaped corners when the navbar expands at the lg breakpoint. */
-        @media (min-width: 992px) {
-            .main-navbar {
-                border-radius: 50rem;
-            }
-        }
-
-        :root {
-            --acof-blue: rgba(0, 90, 156, 0.12);
-            /* Replace with official ACOF blue */
+            background-color: var(--soft-gray);
         }
 
         .resources-table tbody tr:hover {
-            background-color: var(--acof-blue);
+            background-color: var(--mist-blue);
         }
 
         .resources-table {
@@ -68,6 +73,13 @@
 
         .resources-table th {
             font-weight: bold;
+        }
+
+        /* Apply pill-shaped corners when the navbar expands at the lg breakpoint. */
+        @media (min-width: 992px) {
+            .main-navbar {
+                border-radius: 50rem;
+            }
         }
     </style>
 </head>
