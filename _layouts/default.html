@@ -20,8 +20,9 @@
             --mist-blue: #E6EFF5;
             --ocean-blue: #01619C;
             --ice-blue: #E1F8FF;
-
-            ECF6F9
+            --cloud-blue: #ECF6F9;
+            --lagoon-blue: #3D98B2;
+            --pearl-gray: #F6F6F6;
 
             --soft-gray: rgb(244 244 244 / 80%) 
         }
@@ -37,6 +38,14 @@
         .tr-header {
             color: var(--ice-blue);
             background-color: var(--ocean-blue);
+        }
+
+        .tr-heading {
+            color: var(--ocean-blue);        
+        }
+
+        .tr-subheading {
+            color: var(--lagoon-blue);
         }
 
         .hero-image {
@@ -55,10 +64,6 @@
             background-color: var(--soft-gray);
         }
 
-        .resources-table tbody tr:hover {
-            background-color: var(--mist-blue);
-        }
-
         .resources-table {
             border-collapse: collapse;
             width: 100%;
@@ -66,14 +71,24 @@
 
         .resources-table th,
         .resources-table td {
-            border: 1px solid black;
-            padding: 8px;
-            text-align: left;
+            border: 1px solid var(--mist-blue);            
+            text-align: left;            
         }
 
         .resources-table th {
+            padding: 0.625rem 1.25rem;
             font-weight: bold;
+            background-color: var(--pearl-gray);
         }
+
+        .resources-table td {
+            padding: 1.25rem;
+            background-color: white;
+        }
+
+        .resources-table tbody tr:hover td {
+            background-color: var(--mist-blue);
+        }        
 
         /* Apply pill-shaped corners when the navbar expands at the lg breakpoint. */
         @media (min-width: 992px) {
