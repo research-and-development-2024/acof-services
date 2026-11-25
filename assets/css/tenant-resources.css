@@ -1,0 +1,53 @@
+/* Tenant resources classes */
+.tr-header {
+    color: var(--ice-blue);
+    background-color: var(--ocean-blue);
+}
+
+#tenant-resources {
+    background-color: var(--cloud-blue);
+}
+
+#tenant-resources h2 {
+    color: var(--ocean-blue);
+}
+
+#tenant-resources h3 {
+    color: var(--lagoon-blue);
+}
+
+#tenant-resources table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#tenant-resources th,
+#tenant-resources td {
+    border: 1px solid var(--mist-blue);
+    text-align: left;
+}
+
+#tenant-resources th {
+    padding: 0.625rem 1.25rem;
+    font-weight: bold;
+    background-color: var(--pearl-gray);
+}
+
+#tenant-resources td {
+    padding: 1.25rem;
+    background-color: white;
+}
+
+#tenant-resources tbody tr:hover td {
+    background-color: var(--mist-blue);
+}
+
+#tenant-resources .buildings-heading {
+    display: inline-block;
+    border-bottom: 2px solid currentColor;
+    padding-bottom: 0.25rem;
+}
+
+#tenant-resources .resources-content {
+    color: var(--slate-gray);
+}
