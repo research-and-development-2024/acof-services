@@ -23,6 +23,9 @@
 
         catch (error) {
             console.error("Error loading tenant resources:", error);
+
+            document.getElementById("spa-sections-container").textContent =
+                "Resources could not be loaded. Please refresh the page or try again later.";
         }
     }
 
