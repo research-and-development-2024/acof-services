@@ -10,11 +10,7 @@
         integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
 
     <style>
-        body {
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        }
-
-        /* Color scheme */
+        /* Font & color scheme */
         :root {
             --deep-blue: #013556;
             --mist-blue: #E6EFF5;
@@ -23,12 +19,21 @@
             --cloud-blue: #ECF6F9;
             --lagoon-blue: #3D98B2;
             --pearl-gray: #F6F6F6;
-            --slate-gray: #525252;
-
+            --slate-gray: #525252;            
             --soft-gray: rgb(244 244 244 / 80%);
         }
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: var(--slate-gray); 
+        }
+        .header-text-on-dark {
+           color: var(--ice-blue);
+        }
+        .text-on-dark {
+            color: var(--mist-blue);
+        }
 
-        /* Hero/header */
+        /* Hero & header */
         .hero-image {
             display: block;
             width: 100%;
@@ -36,10 +41,20 @@
             min-height: 25rem;
             object-fit: cover;
         }
+        #pd-readiness {
+                background:
+                    linear-gradient(rgb(0 0 0 / 30%), rgb(0 0 0 / 50%)),
+                    url("img/pd-readiness.png") center / cover no-repeat;
+            min-height: 25rem;
+        }        
 
         /* Main navigation menu */        
         #main-navbar {
             background-color: var(--soft-gray);
+        }
+        #main-navbar .nav-link.active {
+            text-decoration: underline;
+            text-underline-offset: 0.3em;
         }
 
         /* Apply pill-shaped corners when the navbar expands at the lg breakpoint. */

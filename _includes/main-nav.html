@@ -1,29 +1,44 @@
 <!-- Main navivgation -->
-<nav id="main-navbar" class="navbar navbar-expand-lg z-3 mt-4 mx-lg-3 {% unless include.overlay == false %}position-absolute top-0 start-0 end-0{% endunless %}"
+<nav id="main-navbar"
+    class="navbar navbar-expand-lg z-3 mt-4 mx-lg-3 {% unless include.overlay == false %}position-absolute top-0 start-0 end-0{% endunless %}"
     data-bs-theme="light" aria-label="Main navigation">
     <div class="container">
         <a class="navbar-brand" href="./">
             <img src="img/acof-logo.svg" alt="ACOF" height="46">
         </a>
-
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu"
             aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="mainMenu">
             <ul class="navbar-nav ms-auto text-uppercase fw-medium">
                 <li class="nav-item">
-                    <a class="nav-link p-lg-3 text-black" href="./family-and-children.html">Family and Children</a>
+                    <a class="nav-link p-lg-3 {% if page.url == '/family-and-children.html' %} active{% endif %}"
+                        href="./family-and-children.html" {% if page.url=='/family-and-children.html'
+                        %}aria-current="page" {% endif %}>
+                        Family and Children
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link p-lg-3 text-black" href="./health-and-housing.html">Health & Housing</a>
+                    <a class="nav-link p-lg-3 {% if page.url == '/health-and-housing.html' %} active{% endif %}"
+                        href="./health-and-housing.html" {% if page.url=='/health-and-housing.html'
+                        %}aria-current="page" {% endif %}>
+                        Health & Housing
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link p-lg-3 text-black" href="./professional-development.html">Professional Development</a>
+                    <a class="nav-link p-lg-3 {% if page.url == '/professional-development.html' %} active{% endif %}"
+                        href="./professional-development.html" {% if page.url=='/professional-development.html'
+                        %}aria-current="page" {% endif %}>
+                        Professional Development
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link p-lg-3 text-black" href="./tenant-resources.html">Tenant Resources</a>
+                    <a class="nav-link p-lg-3 {% if page.url == '/tenant-resources.html' %} active{% endif %}"
+                        href="./tenant-resources.html" {% if page.url=='/tenant-resources.html' %}aria-current="page" {%
+                        endif %}>
+                        Tenant Resources
+                    </a>
                 </li>
             </ul>
         </div>

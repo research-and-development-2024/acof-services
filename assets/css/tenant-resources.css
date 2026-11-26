@@ -47,7 +47,3 @@
     border-bottom: 2px solid currentColor;
     padding-bottom: 0.25rem;
 }
-
-#tenant-resources .resources-content {
-    color: var(--slate-gray);
-}
