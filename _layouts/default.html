@@ -19,16 +19,19 @@
             --cloud-blue: #ECF6F9;
             --lagoon-blue: #3D98B2;
             --pearl-gray: #F6F6F6;
-            --slate-gray: #525252;            
+            --slate-gray: #525252;
             --soft-gray: rgb(244 244 244 / 80%);
         }
+
         body {
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            color: var(--slate-gray); 
+            color: var(--slate-gray);
         }
+
         .header-text-on-dark {
-           color: var(--ice-blue);
+            color: var(--ice-blue);
         }
+
         .text-on-dark {
             color: var(--mist-blue);
         }
@@ -41,17 +44,22 @@
             min-height: 25rem;
             object-fit: cover;
         }
-        #pd-readiness {
-                background:
-                    linear-gradient(rgb(0 0 0 / 30%), rgb(0 0 0 / 50%)),
-                    url("img/pd-readiness.png") center / cover no-repeat;
-            min-height: 25rem;
-        }        
+        .hero-tagline {
+            font-size: clamp(2rem, 5vw, 6rem);
+        }
 
-        /* Main navigation menu */        
+        #pd-readiness {
+            background:
+                linear-gradient(rgb(0 0 0 / 30%), rgb(0 0 0 / 50%)),
+                url("img/pd-readiness.png") center / cover no-repeat;
+            min-height: 25rem;
+        }
+
+        /* Main navigation menu */
         #main-navbar {
             background-color: var(--soft-gray);
         }
+
         #main-navbar .nav-link.active {
             text-decoration: underline;
             text-underline-offset: 0.3em;
@@ -76,7 +84,7 @@
         }
     </style>
     {% if page.stylesheet %}
-            <link rel="stylesheet" href="{{ page.stylesheet | relative_url }}">
+    <link rel="stylesheet" href="{{ page.stylesheet | relative_url }}">
     {% endif %}
 </head>
 
