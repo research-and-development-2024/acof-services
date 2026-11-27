@@ -18,9 +18,15 @@
             --ice-blue: #E1F8FF;
             --cloud-blue: #ECF6F9;
             --lagoon-blue: #3D98B2;
+            --harbor-blue: #3481B0;
             --pearl-gray: #F6F6F6;
             --slate-gray: #525252;
+
             --soft-gray: rgb(244 244 244 / 80%);
+        }
+        .donate-btn {
+            color: var(--harbor-blue);
+            background-color: var(--mist-blue);             
         }
 
         body {
@@ -36,7 +42,7 @@
             color: var(--mist-blue);
         }
 
-        /* Hero & header */
+        /* Hero, header & images */
         .hero-image {
             display: block;
             width: 100%;
@@ -47,7 +53,6 @@
         .hero-tagline {
             font-size: clamp(2rem, 5vw, 6rem);
         }
-
         #pd-readiness {
             background:
                 linear-gradient(rgb(0 0 0 / 30%), rgb(0 0 0 / 50%)),
@@ -65,11 +70,15 @@
             text-underline-offset: 0.3em;
         }
 
-        /* Apply pill-shaped corners when the navbar expands at the lg breakpoint. */
+        /* Apply pill-shaped corners and bigger donate btn when the navbar expands at the lg breakpoint. */
         @media (min-width: 992px) {
             #main-navbar {
                 border-radius: 50rem;
             }
+            .donate-btn {
+                font-size: 1.5rem;
+                padding: 0.75rem 2rem;
+            }            
         }
 
         /* Footer section */
